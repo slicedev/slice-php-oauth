@@ -9,11 +9,14 @@ To test, do the following.
 Pick a domain for testing (say www.testdomain.com)
 
 Add an entry to your hosts file
-`
+
+```
 127.0.0.1 www.testdomain.com
-`
+```
+
 Add a file (testdomain.php) with following content to /etc/apache2/other
-`
+
+```
 NameVirtualHost www.otherdomain.com:80
 <VirtualHost www.otherdomain.com:80>
 	servername www.otherdomain.com
@@ -23,7 +26,8 @@ NameVirtualHost www.otherdomain.com:80
 		Require all granted
 	</Directory>
 </VirtualHost>
-`
+```
+
 Ensure that you can access http://www.testdomain.com/index.php
 
 There is a http://www.testdomain.com/php_info.php page to check version of PHP on your machine
@@ -38,7 +42,8 @@ There is a http://www.testdomain.com/php_info.php page to check version of PHP o
 ## Create an ini file for application
 
 Let's call this application your "test" application. So create a test.ini file with following information.
-`
+
+```
 client_id=YOUR_APPLICATION_CLIENT_ID
 client_secret=YOUR_APPLICATION_CLIENT_SECRET
 redirect_uri=http://www.testdomain.com/callback.php
@@ -47,14 +52,18 @@ token_url=https://api.slice.com/oauth/token
 revoke_token_url=https://api.slice.com/oauth/revoke
 base_api_url=https://api.slice.com
 use_proxy=false
-`
+```
 
 ## Testing
 
 Load the index page in a browser (or refresh if already loaded) http://www.testdomain.com/index.php
+
 This should give you an option to choose application to test.
+
 Application name is taken from the ini file. So, if you created test.ini, you would have an option called "test"
+
 Clicking "choose" will take you through an OAuth authorization process and if everything works fine, should provide you with an access and a refresh token.
+
 You can click "Show config" button to view the configuration that will take effect.
 
 ## To test with a debugging proxy such as Charles
