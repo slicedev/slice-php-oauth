@@ -66,6 +66,9 @@ Clicking "choose" will take you through an OAuth authorization process and if ev
 
 You can click "Show config" button to view the configuration that will take effect.
 
-## To test with a debugging proxy such as Charles
+## To test with a debugging proxy (test with Charles which uses port 8888)
 
-Set `use_proxy=true` in the ini file
+1. Set `use_proxy=true` in the ini file
+2. Reload http://www.testdomain.com
+3. Start Charles
+4. You will see the http calls in Charles proxy as they are made.
