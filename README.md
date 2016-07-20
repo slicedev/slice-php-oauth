@@ -69,6 +69,6 @@ You can click "Show config" button to view the configuration that will take effe
 ## To test with a debugging proxy (test with Charles which uses port 8888)
 
 1. Set `use_proxy=true` in the ini file
-2. Reload http://www.testdomain.com
+2. Reload http://www.testdomain.com/index.php
 3. Start Charles
 4. You will see the http calls in Charles proxy as they are made.
