@@ -126,6 +126,7 @@ class Authentication {
     // Decode compressed responses.
     curl_setopt($r, CURLOPT_ENCODING, 1);
     curl_setopt($r, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($r, CURLOPT_SSL_VERIFYHOST, false);
 
     if ($this->UseProxy) {
       curl_setopt($r, CURLOPT_PROXY, "http://localhost:8888");

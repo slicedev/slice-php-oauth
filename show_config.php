@@ -16,8 +16,9 @@ $ini = parse_ini_file($inifile);
   client_secret : <?php echo $ini['client_secret']; ?> <br/>
   redirect_uri  : <?php echo $ini['redirect_uri']; ?> <br/>
   authorize_url : <?php echo $ini['authorize_url']; ?> <br/>
+  base_api_url  : <?php echo $ini['base_api_url']; ?> <br/>
   token_url     : <?php echo $ini['token_url']; ?> <br/>
-  use_proxy     : <?php echo $ini['use_proxy']; ?> <br/>
+  use_proxy     : <?php echo $ini['use_proxy'] ? 'true' : 'false'; ?> <br/>
 </pre>
 </body>
 </html>
