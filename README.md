@@ -17,9 +17,9 @@ Add an entry to your hosts file
 Add a file (testdomain.php) with following content to /etc/apache2/other
 
 ```
-NameVirtualHost www.otherdomain.com:80
-<VirtualHost www.otherdomain.com:80>
-	servername www.otherdomain.com
+NameVirtualHost www.testdomain.com:80
+<VirtualHost www.testdomain.com:80>
+	servername www.testdomain.com
 	DocumentRoot <PATH_TO_WHERE_THIS_REPO_IS_CHECKED_OUT>
 	<Directory "<PATH_TO_WHERE_THIS_REPO_IS_CHECKED_OUT>">
 		Options Indexes FollowSymLinks
